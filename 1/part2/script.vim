@@ -11,7 +11,7 @@
 :v/+/d_
 :%s/ \d\+//g
 :%s/.*/\=eval(submatch(0))
-:2,$s/^/+
+:%s/^/+
 :%j
 :s/.*/\=eval(submatch(0))
 

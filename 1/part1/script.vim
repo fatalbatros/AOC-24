@@ -8,5 +8,5 @@
 :%s/^0/
 :%s/.*/\=abs(eval(submatch(0)))
 :%s/^/+
-:normal ggVGJ
+:%j
 :s/.*/\=eval(submatch(0))
