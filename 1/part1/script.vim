@@ -1,11 +1,8 @@
-:%s/^/0
-:%s/\s\+/\r
+:%s/\s\+/\r-
 :%sort
-:g/^0/normal A-
-:let @j= "1000j$v0y1000k$p"
-:g/^0/normal @j
-:v/^0/d _
-:%s/^0/
+:let @j= "1000j$v0y1000k0P"
+:g/^-/normal @j
+:v/-/d _
 :%s/.*/\=abs(eval(submatch(0)))
 :%s/^/+
 :%j
